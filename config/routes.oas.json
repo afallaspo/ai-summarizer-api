@@ -236,17 +236,23 @@
         "x-zuplo-route": {
           "corsPolicy": "none",
           "handler": {
-            "export": "urlForwardHandler",
-            "module": "$import(@zuplo/runtime)",
-            "options": {
-              "baseUrl": "https://echo.zuplo.io"
-            }
+            "export": "default",
+            "module": "$import(./modules/routes/summarize-handler)",
+            "options": {}
           },
           "policies": {
             "inbound": []
           }
         },
-        "operationId": "new-route-c648bbd8"
+        "operationId": "new-route-c648bbd8",
+        "additionalOperationContext": {
+          "oasFilePath": "/config/routes.oas.json",
+          "method": "post",
+          "path": "/v1/summarize",
+          "pathZuploConfig": {
+            "pathMode": "open-api"
+          }
+        }
       }
     }
   },
