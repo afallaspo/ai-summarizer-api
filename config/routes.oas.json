@@ -237,22 +237,14 @@
           "corsPolicy": "none",
           "handler": {
             "export": "default",
-            "module": "$import(./modules/routes/summarize-handler)",
+            "module": "$import(./modules/routes/summarize)",
             "options": {}
           },
           "policies": {
             "inbound": []
           }
         },
-        "operationId": "new-route-c648bbd8",
-        "additionalOperationContext": {
-          "oasFilePath": "/config/routes.oas.json",
-          "method": "post",
-          "path": "/v1/summarize",
-          "pathZuploConfig": {
-            "pathMode": "open-api"
-          }
-        }
+        "operationId": "new-route-c648bbd8"
       }
     }
   },
