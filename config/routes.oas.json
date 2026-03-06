@@ -60,7 +60,9 @@
             }
           }
         },
-        "tags": ["Todo"]
+        "tags": [
+          "Todo"
+        ]
       },
       "post": {
         "summary": "Create a new todo",
@@ -112,7 +114,9 @@
             }
           }
         },
-        "tags": ["Todo"]
+        "tags": [
+          "Todo"
+        ]
       }
     },
     "/todos/{id}": {
@@ -180,7 +184,9 @@
             }
           }
         },
-        "tags": ["Todo"]
+        "tags": [
+          "Todo"
+        ]
       },
       "delete": {
         "summary": "Delete a todo",
@@ -215,7 +221,38 @@
             }
           }
         },
-        "tags": ["Todo"]
+        "tags": [
+          "Todo"
+        ]
+      }
+    },
+    "/v1/summarize": {
+      "x-zuplo-path": {
+        "pathMode": "open-api"
+      },
+      "post": {
+        "summary": "Summarize content using AI",
+        "description": "Send text or URL to get a summary.\n",
+        "x-zuplo-route": {
+          "corsPolicy": "none",
+          "handler": {
+            "export": "default",
+            "module": "$import(./modules/routes/summarize-handler)",
+            "options": {}
+          },
+          "policies": {
+            "inbound": []
+          }
+        },
+        "operationId": "new-route-c648bbd8",
+        "additionalOperationContext": {
+          "oasFilePath": "/config/routes.oas.json",
+          "method": "post",
+          "path": "/v1/summarize",
+          "pathZuploConfig": {
+            "pathMode": "open-api"
+          }
+        }
       }
     }
   },
@@ -241,7 +278,12 @@
             "description": "The user ID who owns the todo"
           }
         },
-        "required": ["id", "title", "completed", "userId"]
+        "required": [
+          "id",
+          "title",
+          "completed",
+          "userId"
+        ]
       },
       "CreateTodo": {
         "type": "object",
@@ -260,7 +302,10 @@
             "description": "The user ID who owns the todo"
           }
         },
-        "required": ["title", "userId"]
+        "required": [
+          "title",
+          "userId"
+        ]
       },
       "UpdateTodo": {
         "type": "object",
