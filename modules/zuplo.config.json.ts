@@ -1,0 +1,3 @@
+{
+  "corsPolicy": "anything-goes"
+}
